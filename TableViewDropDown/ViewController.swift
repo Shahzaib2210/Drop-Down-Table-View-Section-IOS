@@ -47,6 +47,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         ]
         
         view.addSubview(tablcview)
+        
         tablcview.delegate = self
         tablcview.dataSource = self
         
@@ -91,8 +92,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             sections[indexPath.section].isOpened = !sections[indexPath.section].isOpened
             tableView.reloadSections([indexPath.section], with: .none)
         } else {
-            
-            print("Sub Cell Tapped")
-        }
+            print("\(sections[indexPath.section].title) - \(indexPath.row)")
+         }
     }
 }
